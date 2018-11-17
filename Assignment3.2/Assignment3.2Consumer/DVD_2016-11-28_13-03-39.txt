@@ -1,3 +1,0 @@
-Title: Album_Title
-Year: 2016
-Price: 45.0

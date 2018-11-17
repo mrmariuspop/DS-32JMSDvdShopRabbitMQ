@@ -1,0 +1,10 @@
+com\dvds\jms\Emitor.class
+com\dvds\jms\Endpoint$Main.class
+com\dvds\jms\Receiver$1.class
+com\dvds\jms\Endpoint.class
+com\dvds\jms\Producer.class
+com\dvds\controllers\DVDController.class
+com\dvds\jms\MessageConsumer.class
+com\dvds\entities\DVD.class
+com\dvds\jms\Receiver.class
+com\dvds\MailService.class

@@ -1,59 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>Assignment3.2</groupId>
-  <artifactId>Assignment3.2</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  
-  <dependencies>
-  	<dependency>
-    	<groupId>javax.servlet</groupId>
-    	<artifactId>javax.servlet-api</artifactId>
-    	<version>3.1.0</version>
-    	<scope>provided</scope>
-	</dependency>
-	
-	<dependency>
-    	<groupId>javax.servlet.jsp</groupId>
-    	<artifactId>javax.servlet.jsp-api</artifactId>
-    	<version>2.3.1</version>
-    	<scope>provided</scope>
-	</dependency>
-	
-	<dependency>
-        <groupId>javax.servlet</groupId>
-        <artifactId>jstl</artifactId>
-		<version>1.2</version>
-	</dependency>
-		 
-	<dependency>    
-    	<groupId>org.jdom</groupId>
-    	<artifactId>jdom</artifactId>    
-    	<version>2.0.2</version>
-	</dependency>
-	
-	<dependency>    
-    	<groupId>com.rabbitmq</groupId>
-    	<artifactId>amqp-client</artifactId>
-    	<version>3.6.5</version>
-	</dependency>
-  </dependencies>
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.0</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
-  
-  <modules>
-    <module>Assignment3.2Producer</module>
-    <module>Assignment3.2Consumer</module>
-  </modules>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>assignment-3.2</groupId>
+    <artifactId>Assignment3.2</artifactId>
+    <packaging>war</packaging>
+    <version>1.0</version>
+
+    <properties>
+        <jdk.version>1.8</jdk.version>
+        <spring.version>4.3.4.RELEASE</spring.version>
+        <rabbitmq.version>4.0.0</rabbitmq.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>${rabbitmq.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>dvds</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

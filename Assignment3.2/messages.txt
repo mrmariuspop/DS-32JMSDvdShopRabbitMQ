@@ -1,0 +1,5 @@
+DVD{title='asdf', year=123, length=12}
+DVD{title='gfsdfgs', year=1234, length=123}
+DVD{title='gdfgdgf', year=23141, length=12}
+DVD{title='ghfh', year=4534, length=63}
+DVD{title='yyyy', year=123, length=1}
