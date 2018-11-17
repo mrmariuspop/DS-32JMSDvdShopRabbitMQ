@@ -1,0 +1,3 @@
+edu\assign3_2\producer\controller\AddDVDController.class
+edu\assign3_2\entities\DVD.class
+edu\assign3_2\producer\service\MessageSender.class
